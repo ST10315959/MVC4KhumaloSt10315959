@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVC4Khumalo.Models.Product>
+
+@{
+    ViewData["Title"] = "Display Products";
+}
+
+<h1>My Work</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4 mb-4">
+                <div class="card" style="border: 1px solid #ccc; background-color: rgba(255, 255, 255, 0.8);">
+                    <img src="@item.ImageUrl" class="card-img-top" alt="@item.Name" style="width: 100%; height: 200px; object-fit: cover;" />
+                    <div class="card-body" style="height: 200px;">
+                        <div>
+                            <h5 class="card-title">Name: @Html.DisplayFor(modelItem => item.Name)</h5>
+                            <p class="card-text">Price: @Html.DisplayFor(modelItem => item.Price)</p>
+                            <p class="card-text">Category: @Html.DisplayFor(modelItem => item.Category)</p>
+                            <p class="card-text">Quantity: @Html.DisplayFor(modelItem => item.Quantity)</p>
+                        </div>
+                        <div class="col-md-4" style="text-align: right; margin-bottom: 10px; padding: 2px">
+                            <form method="post" asp-action="AddToCart" asp-controller="Carts">
+                                <input type="hidden" name="productId" value="@item.Id" />
+                                <button type="submit" class="btn btn-primary" data-product-id="@item.Id">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

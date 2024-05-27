@@ -1,0 +1,55 @@
+﻿@model MVC4Khumalo.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    .orange-text {
+        color: orange;
+    }
+</style>
+
+<h1 class="orange-text">Details</h1>
+
+<div>
+    <h4 class="orange-text">Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2 orange-text">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10 orange-text">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2 orange-text">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10 orange-text">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2 orange-text">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10 orange-text">
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        <dt class="col-sm-2 orange-text">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class="col-sm-10 orange-text">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt class="col-sm-2 orange-text">
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+        <dd class="col-sm-10 orange-text">
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="orange-text">Edit</a> |
+    <a asp-action="Index" class="orange-text">Back to List</a>
+</div>
+

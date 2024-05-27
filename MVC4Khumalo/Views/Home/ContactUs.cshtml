@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title-block {
+            background-color: #474e5d;
+            color: orange;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-method {
+            margin-bottom: 20px;
+        }
+
+            .contact-method h3 {
+                margin-top: 0;
+            }
+
+        .contact-form-container {
+            background-color: #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-block">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="contact-info">
+        <div class="contact-method">
+            <h3>Email</h3>
+            <p>Email us at: info@khumalocraft.com</p>
+        </div>
+        <div class="contact-method">
+            <h3>Phone</h3>
+            <p>Call us at: +27 31 696 6969</p>
+        </div>
+        <div class="contact-method">
+            <h3>Postal Address</h3>
+            <p>KhumaloCraft Emporium<br>123 Main Street<br>Durban, Kwa-Zulu Natal, 4001<br>South Africaz</p>
+        </div>
+        <div class="contact-form-container">
+            <h3>Contact Khumalo Crafters</h3>
+            <p>For inquiries related to crafting or product information, please fill out the form below:</p>
+            <!-- Insert your contact form here -->
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<PurchaseHistory>
+
+@{
+    ViewData["Title"] = "Purchase History";
+}
+
+<h1 style="color: orange;">@ViewData["Title"]</h1>
+
+@foreach (var purchase in Model)
+{
+    <div class="purchase-container">
+        <form method="post" asp-action="Delete" asp-route-id="@purchase.Id">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="4" style="color: orange;">Purchase Date: @purchase.PurchaseDate</th>
+                        <th colspan="2" style="color: orange;">Customer: @purchase.FirstName @purchase.LastName</th>
+                    </tr>
+                    <tr>
+                        <th style="color: orange;">Product</th>
+                        <th style="color: orange;">Quantity</th>
+                        <th style="color: orange;">Price</th>
+                        <th style="color: orange;">Total</th>
+                        <th></th> <!-- Add column for delete button -->
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in purchase.PurchasedItems)
+                    {
+                        <tr>
+                            <td style="color: orange;">@item.Product.Name</td>
+                            <td style="color: orange;">@item.Quantity</td>
+                            <td style="color: orange;">@item.Product.Price</td>
+                            <td style="color: orange;">@(item.Product.Price * item.Quantity)</td>
+                            <td></td> <!-- Placeholder for delete button column -->
+                        </tr>
+                    }
+                    <tr>
+                        <td colspan="3"></td>
+                        <td style="color: orange;"><strong>Total:</strong></td>
+                        <td style="color: orange;">@purchase.TotalPrice</td>
+                        <td>
+                            <!-- Column for delete button -->
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+}
+
+<style>
+    .purchase-container {
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+        .purchase-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .purchase-container th,
+        .purchase-container td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        .purchase-container th {
+            text-align: left;
+        }
+
+            .purchase-container th[colspan="4"],
+            .purchase-container th[colspan="2"] {
+                text-align: center;
+            }
+
+        .purchase-container tbody td:last-child {
+            text-align: right;
+        }
+
+    /* Style for the delete button */
+    .btn-danger {
+        margin: 0;
+    }
+</style>

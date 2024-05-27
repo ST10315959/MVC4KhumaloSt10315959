@@ -1,0 +1,134 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+        .title {
+            color: orange;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: orange;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .button:hover {
+                background-color: #555;
+            }
+
+        screen and (max-width: 650px) {
+            .column
+
+        {
+            width: 100%;
+            display: block;
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>Welcome to our company! We are dedicated to providing innovative solutions in the crafting e commerce apace. With a team of passionate professionals, we strive to sell the highest quality crafts</p>
+        <p>Feel free to explore our website to learn more about our services and offerings. If you have any questions or inquiries, don't hesitate to reach out to us. Thank you for visiting!</p>
+
+        <h2 style="font-weight: bold;">Mission Statement</h2>
+        <p>At Khumalo's Craft, our mission is to empower individuals and businesses to thrive in the digital age. We achieve this by providing innovative technology solutions tailored to our clients' needs, coupled with exceptional service and support. Guided by integrity, creativity, and a commitment to excellence, we aim to make a positive impact on our clients, employees, and communities we serve.</p>
+    </div>
+
+
+    <h2 style="text-align:center">Our Team</h2>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="https://st2.depositphotos.com/1158045/5879/i/450/depositphotos_58797721-stock-photo-young-black-businessman-outdoor.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>James Khumalo</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>James Khumalo is the visionary leader behind Khumalo's Craft. With a keen eye for innovation and a passion for crafting, James drives the company's strategic direction and ensures that our products and services exceed customer expectations.</p>
+                    <p>jamesK@kcrafters.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMG1y-DzviMbReRsVXSui6K42ioY_Ica5kKqsAtnMjg&s" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>Makwande Ntombela</h2>
+                    <p class="title">HIM & head designer</p>
+                    <p>Makwande Ntombela leads our Human Interface Management (HIM) team and serves as the head designer. With a strong background in user experience and interface design, Makwande ensures that our products are not only visually appealing but also intuitive and user-friendly.</p>
+                    <p>NtombelaM@kcrafters.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1425874427/photo/portrait-of-a-proud-business-woman-or-ceo-with-leadership-vision-and-goal-for-success-happy.webp?b=1&s=170667a&w=0&k=20&c=HNdaqaWKMIMu30iOFQfB2xpw0rsYbl0Ci1swKi-GvzA=" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>Thobile Mkhize</h2>
+                    <p class="title">Junior designer</p>
+                    <p>Thobile Mkhize is a talented junior designer who brings fresh perspectives and creative ideas to our projects. With a passion for design and attention to detail, Thobile contributes to the development of visually stunning and impactful solutions for our clients.</p>
+                    <p>ThobileM@kcrafters.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MVC4Khumalo.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<h1 style="color: orange;">@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="color: orange;">@Html.DisplayNameFor(model => model.First().FirstName)</th>
+            <th style="color: orange;">@Html.DisplayNameFor(model => model.First().LastName)</th>
+            <th style="color: orange;">@Html.DisplayNameFor(model => model.First().CardNumber)</th>
+            <th style="color: orange;">@Html.DisplayNameFor(model => model.First().CVV)</th>
+            <th style="color: orange;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="color: orange;">@Html.DisplayFor(modelItem => item.FirstName)</td>
+                <td style="color: orange;">@Html.DisplayFor(modelItem => item.LastName)</td>
+                <td style="color: orange;">@Html.DisplayFor(modelItem => item.CardNumber)</td>
+                <td style="color: orange;">@Html.DisplayFor(modelItem => item.CVV)</td>
+                <td style="color: orange;">
+                    <a asp-action="Edit" asp-route-id="@item.Id" style="color: orange;">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" style="color: orange;">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" style="color: orange;">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Create" class="btn btn-primary" style="color: orange;">Create New</a>
+</div>
+
+<form method="post" asp-action="CompleteOrder">
+    <button type="submit" class="btn btn-success" style="color: orange;">Complete Order</button>
+</form>

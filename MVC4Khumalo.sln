@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4Khumalo", "MVC4Khumalo\MVC4Khumalo.csproj", "{0C56250A-0347-45AF-9AD5-C9388497FBDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C56250A-0347-45AF-9AD5-C9388497FBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C56250A-0347-45AF-9AD5-C9388497FBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C56250A-0347-45AF-9AD5-C9388497FBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C56250A-0347-45AF-9AD5-C9388497FBDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D99F00E2-957C-4BE3-880D-5DF92F7D9FC5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,130 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    /* Existing styles */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0; /* Set a light background color */
+    }
+
+    .about-section {
+        padding: 80px 0; /* Increase padding for better visual separation */
+        text-align: center;
+        background-color: #474e5d; /* Dark background color for the about section */
+        color: white;
+        overflow: hidden; /* Clear floated elements */
+    }
+
+    .container {
+        padding: 0 20px;
+        max-width: 1200px; /* Limit the width of the content */
+        margin: 0 auto; /* Center the content horizontally */
+    }
+
+    .title {
+        color: orange;
+        font-size: 36px; /* Increase font size for emphasis */
+        margin-bottom: 20px; /* Add some space below the title */
+    }
+
+    .description {
+        font-size: 18px; /* Increase font size for readability */
+        line-height: 1.6; /* Increase line height for better spacing */
+        margin-bottom: 40px; /* Add more space below the description */
+    }
+
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 10px 20px; /* Increase padding for better clickability */
+        font-size: 16px; /* Increase font size for better visibility */
+        color: white;
+        background-color: orange; /* Use a vibrant color for the button */
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Add smooth transition on hover */
+        margin-top: 20px; /* Add margin at the top */
+    }
+
+        .button:hover {
+            background-color: #474e5d; /* Darken the button color on hover */
+        }
+
+    .footer {
+        background-color: #474e5d; /* Dark background color for the footer */
+        color: white;
+        padding: 20px 0; /* Increase padding for better spacing */
+        text-align: center;
+    }
+
+    /* New styles for images */
+    .image-container {
+        width: calc(33.33% - 20px); /* Set the width to 33.33% and subtract margin */
+        margin: 20px 10px; /* Add margin between images */
+        float: left; /* Float images to the left to make them inline */
+        overflow: hidden; /* Hide overflow for floated elements */
+    }
+
+        .image-container img {
+            width: 100%; /* Make the images fill their containers */
+            height: auto; /* Maintain aspect ratio */
+            transition: transform 0.3s ease; /* Add smooth transition for hover effect */
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1); /* Scale up the image on hover */
+        }
+
+    }
+</style>
+
+<div class="about-section">
+    <div class="container">
+        <h1 class="title">Welcome to Khumalo's Crafts</h1>
+        <p class="description">
+            At Khumalo's Crafts, we specialize in creating unique and handcrafted pieces that inspire and delight. Our passion for craftsmanship drives us to deliver products of exceptional quality, ensuring that each piece tells a story and adds beauty to everyday life.
+        </p>
+        <p class="description">
+            From intricately designed jewelry to bespoke home decor, our collection showcases the finest materials and meticulous attention to detail. Whether you're searching for the perfect gift or treating yourself to something special, Khumalo's Crafts offers a curated selection that reflects our commitment to excellence.
+        </p>
+        <p class="description">
+            Join us on a journey of creativity and discovery as we continue to push the boundaries of traditional craftsmanship, embracing innovation and modern design principles. Experience the artistry of Khumalo's Crafts and elevate your surroundings with timeless elegance and sophistication.
+        </p>
+        <button class="button">Explore Our Collection</button>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/c7/f8/d7/c7f8d7fb84ddec373015f790213843f3.jpg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/bc/39/b8/bc39b8f9a35494b5286a0f484ab12e66.jpg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/564x/f8/42/db/f842dbc78b1e9bfcd62401e21d6ce9cd.jpg" alt="Image 3">
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class
+
+<@* div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@if (User.IsInRole("Admin"))
+{
+    <h1>Hi Admin #Zdaddy</h1>
+}else{
+<h1>Wagwan wasteman</h1>
+} *@
